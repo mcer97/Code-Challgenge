@@ -1,0 +1,49 @@
+.container {
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  .header {
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2rem;
+
+    .searchSection {
+      max-width: 35%;
+    }
+  }
+
+  .scheduleItemsSection {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    user-select: none;
+
+    .highlighterScreen {
+      z-index: 1;
+      position: absolute;
+      left: calc(35% + 2.5rem);
+      top: 0;
+      width: calc(65% - 5rem);
+      height: 100%;
+
+      .highlighter, .highlighterOutline {
+        position: absolute;
+        height: calc(100% - 1.2rem);
+        width: calc(100% / 21);
+        background-color: rgba(244, 156, 118, 0.24);
+        left: 0;
+        top: 0.6rem;
+        box-shadow: 0 0 0 0.125rem rgba(244, 156, 118, 1.0);
+        border-radius: 0.25rem;
+        transition: unset;
+      }
+      .highlighterOutline {
+        background-color: transparent;
+        transition: 0.025s 0.0s left ease-in-out;
+      }
+    }
+  }
+}

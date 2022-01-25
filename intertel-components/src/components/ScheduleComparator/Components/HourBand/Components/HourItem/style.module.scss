@@ -1,0 +1,57 @@
+.hourContainer {
+  flex-grow: 0;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  width: calc(100% / 21);
+
+  .internalContainer {
+    background-color: hsl(210, 11.1%, 96.5%);
+    height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    box-sizing: border-box;
+
+    .hourNumber {
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      flex-grow: 1;
+    }
+
+    .meridien {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-grow: 1;
+      font-size: 0.68rem;
+    }
+
+    &.hourContainerDayStart {
+      border-radius: 0.25rem 0 0 0.25rem;
+      margin-left: 0.125rem;
+      padding-right: 0.125rem;
+
+      .hourNumber {
+        font-size: 0.5rem;
+        text-transform: uppercase;
+      }
+
+      .meridien {
+        align-items: center;
+      }
+    }
+
+    &.hourContainerDayEnd {
+      padding-left: 0.125rem;
+      border-radius: 0 0.25rem 0.25rem 0;
+      margin-right: 0.125rem;
+    }
+  }
+}
